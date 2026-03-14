@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gully Cricket Premier League</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#0f172a,#1e40af);
+color:white;
+text-align:center;
+}
+
+/* HEADER */
+
+header{
+padding:50px 20px;
+}
+
+.logo{
+width:180px;
+max-width:80%;
+margin-bottom:25px;
+}
+
+h1{
+font-size:40px;
+font-weight:700;
+}
+
+.play{
+font-size:32px;
+font-weight:700;
+color:#38bdf8;
+margin-top:10px;
+}
+
+/* VOTE BUTTON */
+
+.vote-section{
+margin-top:40px;
+}
+
+.vote-btn{
+display:inline-block;
+padding:18px 45px;
+background:#38bdf8;
+color:#000;
+font-size:20px;
+font-weight:600;
+border-radius:40px;
+text-decoration:none;
+overflow:hidden;
+position:relative;
+}
+
+.vote-btn span{
+display:inline-block;
+animation:moveText 2s infinite linear;
+}
+
+@keyframes moveText{
+0%{transform:translateX(-10px);}
+50%{transform:translateX(10px);}
+100%{transform:translateX(-10px);}
+}
+
+.vote-text{
+margin-top:12px;
+font-size:16px;
+opacity:0.9;
+}
+
+/* VIDEO */
+
+.video-section{
+margin-top:80px;
+display:flex;
+justify-content:center;
+padding:20px;
+}
+
+video{
+width:90%;
+max-width:850px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,0.7);
+}
+
+/* FOOTER */
+
+footer{
+margin-top:100px;
+padding:25px;
+background:#020617;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+h1{
+font-size:30px;
+}
+
+.play{
+font-size:24px;
+}
+
+.vote-btn{
+font-size:18px;
+padding:15px 35px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<img src="logo.png" class="logo">
+
+<h1>Gully Cricket Premier League</h1>
+
+<div class="play">#PLAY</div>
+
+<div class="vote-section">
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSe50iPXmjmJOmMkzwhzXwZ3-k6HvA0EipZYWy4OjLesHChAlA/closedform" class="vote-btn">
+
+<span>VOTE NOW</span>
+
+</a>
+
+<div class="vote-text">
+
+GCPL Official Awards (-∞ to 2025]
+
+</div>
+
+</div>
+
+</header>
+
+<section class="video-section">
+
+<video autoplay muted loop controls>
+
+<source src="intro.mp4" type="video/mp4">
+
+</video>
+
+</section>
+
+<footer>
+
+Developed by Adarsh Kumar
+
+</footer>
+
+</body>
+
+</html>
