@@ -125,12 +125,8 @@ animation:glow 2s infinite alternate;
 }
 
 @keyframes glow{
-from{
-box-shadow:0 0 10px #38bdf8;
-}
-to{
-box-shadow:0 0 25px #38bdf8;
-}
+from{box-shadow:0 0 10px #38bdf8;}
+to{box-shadow:0 0 25px #38bdf8;}
 }
 
 .vote-text{
@@ -175,10 +171,30 @@ animation-duration:15s;
 100%{left:110%;}
 }
 
-/* PLAYER STATS BUTTON AREA */
+/* BUTTON AREA */
 
 .stats-section{
 margin-top:100px;
+}
+
+/* HALL OF FAME BUTTON */
+
+.hof-btn{
+display:inline-block;
+padding:18px 45px;
+background:red;
+color:white;
+font-size:20px;
+font-weight:600;
+border-radius:40px;
+text-decoration:none;
+margin-left:20px;
+animation:hofGlow 2s infinite alternate;
+}
+
+@keyframes hofGlow{
+from{box-shadow:0 0 10px red;}
+to{box-shadow:0 0 25px red;}
 }
 
 /* FOOTER */
@@ -234,11 +250,13 @@ GCPL Official Awards (-∞ to 2025]
 
 </section>
 
-<!-- PLAYER STATS BUTTON -->
+<!-- BUTTON SECTION -->
 
 <section class="stats-section">
 
 <a href="stats.html" class="vote-btn">Player Stats</a>
+
+<a href="halloffame.html" class="hof-btn">Hall of Fame</a>
 
 </section>
 
