@@ -68,11 +68,28 @@ h1{
 font-size:40px;
 }
 
+/* GLOWING #PLAY BOLD */
+
 .play{
 font-size:32px;
 font-weight:bold;
 color:#38bdf8;
 margin-top:8px;
+text-shadow:
+0 0 5px #38bdf8,
+0 0 10px #38bdf8,
+0 0 20px #38bdf8,
+0 0 40px #0ea5e9;
+animation:playGlow 2s infinite alternate;
+}
+
+@keyframes playGlow{
+from{
+text-shadow:0 0 5px #38bdf8,0 0 10px #38bdf8;
+}
+to{
+text-shadow:0 0 10px #38bdf8,0 0 25px #38bdf8,0 0 40px #0ea5e9;
+}
 }
 
 /* SMALL MUSIC BUTTON */
@@ -135,7 +152,7 @@ border-radius:15px;
 box-shadow:0 20px 50px rgba(0,0,0,0.7);
 }
 
-/* CRICKET BALL */
+/* CRICKET BALL ANIMATION */
 
 .ball{
 position:fixed;
@@ -158,28 +175,10 @@ animation-duration:15s;
 100%{left:110%;}
 }
 
-/* PLAYERS SECTION */
+/* PLAYER STATS BUTTON AREA */
 
-.players{
-margin-top:120px;
-padding:40px;
-background:rgba(0,0,0,0.5);
-}
-
-.players h2{
-margin-bottom:20px;
-font-size:32px;
-}
-
-.category{
-margin-top:25px;
-font-size:20px;
-color:#38bdf8;
-}
-
-.players p{
-margin-top:8px;
-font-size:18px;
+.stats-section{
+margin-top:100px;
 }
 
 /* FOOTER */
@@ -206,11 +205,12 @@ font-size:14px;
 
 <img src="logo.png" class="logo">
 
-<h1>Gully Cricket Premier League 
+<h1>
+Gully Cricket Premier League 
 <a href="intro.mp4" class="music-btn">Music Video</a>
 </h1>
 
-<div class="play"><b>#PLAY</b></div>
+<div class="play">#PLAY BOLD</div>
 
 <div class="vote-section">
 
@@ -234,28 +234,9 @@ GCPL Official Awards (-∞ to 2025]
 
 </section>
 
-<!-- PLAYERS SECTION -->
+<!-- PLAYER STATS BUTTON -->
 
-<section class="players">
-
-<h2>Our Players</h2>
-
-<p>
-Soumyadeep D,
-Atik,
-Deeptanu,
-Souradeep,
-Rudransh,
-Adriraj,
-Ayush,
-Imtiaj,
-Soumyadeep B,
-Nabadeep,
-Aritra,
-Adarsh
-</p>
-
-<br><br>
+<section class="stats-section">
 
 <a href="stats.html" class="vote-btn">Player Stats</a>
 
