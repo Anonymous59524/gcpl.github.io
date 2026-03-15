@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+<title>Clutch Player Of the Year</title>
 
-<title>Best Power Hitter</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,79 +16,118 @@ text-align:center;
 overflow:hidden;
 }
 
-.title{
-margin-top:60px;
-font-size:40px;
-}
+.title{margin-top:60px;font-size:40px;}
 
-.card{
-margin-top:80px;
-}
+.card{margin-top:80px;}
 
 .card img{
 width:220px;
 border-radius:20px;
+border:4px solid gold;
 }
 
 .player{
-font-size:30px;
+font-size:32px;
 font-weight:bold;
 margin-top:20px;
 }
 
-/* Confetti */
+.trophy{
+font-size:70px;
+margin-top:20px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-10px);}
+}
 
 .confetti{
 position:fixed;
 width:10px;
 height:10px;
-background:gold;
 top:-10px;
-animation:fall 3s linear infinite;
+animation:fall 4s linear infinite;
 }
 
 @keyframes fall{
-to{
-transform:translateY(100vh) rotate(360deg);
+to{transform:translateY(100vh) rotate(360deg);}
 }
+
+.sparkle{
+position:fixed;
+font-size:20px;
+animation:twinkle 1.5s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:0.3;}
+to{opacity:1;}
+}
+
+.firework{
+position:fixed;
+width:6px;
+height:6px;
+background:red;
+border-radius:50%;
+animation:explode 2s ease-out forwards;
+}
+
+@keyframes explode{
+to{transform:translateY(-200px) scale(2);opacity:0;}
 }
 
 </style>
-
 </head>
 
-<body onload="celebrate()">
+<body onclick="celebrate()">
 
-<div class="title">Clutch Player Of The Year</div>
+<div class="title">Best Power Hitter</div>
+
+<div class="trophy">🏆</div>
 
 <div class="card">
-
 <img src="winner.png">
-
 <div class="player">Player Name</div>
-
 </div>
 
-<audio id="sound">
-<source src="https://assets.mixkit.co/sfx/preview/mixkit-crowd-cheering-449.mp3">
+<audio id="cheer" preload="auto">
+<source src="cheer.mp3" type="audio/mpeg">
 </audio>
 
 <script>
 
 function celebrate(){
 
-document.getElementById("sound").play();
+let sound=document.getElementById("cheer");
+sound.currentTime=0;
+sound.play().catch(()=>{});
 
-for(let i=0;i<120;i++){
+for(let i=0;i<150;i++){
+let c=document.createElement("div");
+c.className="confetti";
+c.style.left=Math.random()*100+"%";
+c.style.backgroundColor=["gold","red","blue","lime"][Math.floor(Math.random()*4)];
+document.body.appendChild(c);
+}
 
-let conf=document.createElement("div");
+for(let i=0;i<40;i++){
+let s=document.createElement("div");
+s.className="sparkle";
+s.innerHTML="✨";
+s.style.left=Math.random()*100+"%";
+s.style.top=Math.random()*100+"%";
+document.body.appendChild(s);
+}
 
-conf.className="confetti";
-
-conf.style.left=Math.random()*100+"%";
-
-document.body.appendChild(conf);
-
+for(let i=0;i<20;i++){
+let f=document.createElement("div");
+f.className="firework";
+f.style.left=Math.random()*100+"%";
+f.style.top="80%";
+document.body.appendChild(f);
 }
 
 }
