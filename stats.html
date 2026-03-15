@@ -32,7 +32,7 @@ z-index:-1;
 }
 
 header{
-padding:60px;
+padding:80px;
 }
 
 .logo{
@@ -40,42 +40,38 @@ width:150px;
 }
 
 h1{
-margin-top:10px;
 font-size:36px;
 }
 
 .play{
 font-size:28px;
-font-weight:bold;
 color:#38bdf8;
+font-weight:bold;
 }
 
-table{
-margin:auto;
-margin-top:30px;
-border-collapse:collapse;
-width:80%;
-background:rgba(0,0,0,0.6);
+.options{
+margin-top:100px;
 }
 
-th,td{
-padding:12px;
-border:1px solid white;
-}
-
-th{
+.option-btn{
+display:inline-block;
+margin:20px;
+padding:18px 40px;
 background:#38bdf8;
 color:black;
+font-weight:600;
+border-radius:40px;
+text-decoration:none;
+animation:glow 2s infinite alternate;
 }
 
-.category{
-margin-top:50px;
-font-size:26px;
-color:#38bdf8;
+@keyframes glow{
+from{box-shadow:0 0 10px #38bdf8;}
+to{box-shadow:0 0 25px #38bdf8;}
 }
 
 footer{
-margin-top:80px;
+margin-top:120px;
 padding:20px;
 background:rgba(0,0,0,0.6);
 }
@@ -92,64 +88,24 @@ background:rgba(0,0,0,0.6);
 
 <h1>Gully Cricket Premier League</h1>
 
-<div class="play">#PLAY</div>
+<div class="play">#PLAY BOLD</div>
 
 </header>
 
-<div class="category">Batters</div>
+<div class="options">
 
-<table>
+<a href="batters.html" class="option-btn">Batters</a>
 
-<tr>
-<th>SL No</th>
-<th>Player Name</th>
-<th>Rating</th>
-</tr>
+<a href="bowlers.html" class="option-btn">Bowlers</a>
 
-<tr><td>1</td><td>Soumyadeep D</td><td>-</td></tr>
-<tr><td>2</td><td>Atik</td><td>-</td></tr>
-<tr><td>3</td><td>Deeptanu</td><td>-</td></tr>
+<a href="allrounders.html" class="option-btn">All Rounders</a>
 
-</table>
-
-<div class="category">Bowlers</div>
-
-<table>
-
-<tr>
-<th>SL No</th>
-<th>Player Name</th>
-<th>Rating</th>
-</tr>
-
-<tr><td>1</td><td>Souradeep</td><td>-</td></tr>
-<tr><td>2</td><td>Rudransh</td><td>-</td></tr>
-<tr><td>3</td><td>Adriraj</td><td>-</td></tr>
-
-</table>
-
-<div class="category">All Rounders</div>
-
-<table>
-
-<tr>
-<th>SL No</th>
-<th>Player Name</th>
-<th>Rating</th>
-</tr>
-
-<tr><td>1</td><td>Ayush</td><td>-</td></tr>
-<tr><td>2</td><td>Imtiaj</td><td>-</td></tr>
-<tr><td>3</td><td>Soumyadeep B</td><td>-</td></tr>
-<tr><td>4</td><td>Nabadeep</td><td>-</td></tr>
-<tr><td>5</td><td>Aritra</td><td>-</td></tr>
-<tr><td>6</td><td>Adarsh</td><td>-</td></tr>
-
-</table>
+</div>
 
 <footer>
 Developed by Adarsh Kumar
 </footer>
 
 </body>
+
 </html>
