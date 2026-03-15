@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Best Power Hitter</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+font-family:Poppins;
+background:#0f172a;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+.title{
+margin-top:60px;
+font-size:40px;
+}
+
+.card{
+margin-top:80px;
+}
+
+.card img{
+width:220px;
+border-radius:20px;
+}
+
+.player{
+font-size:30px;
+font-weight:bold;
+margin-top:20px;
+}
+
+/* Confetti */
+
+.confetti{
+position:fixed;
+width:10px;
+height:10px;
+background:gold;
+top:-10px;
+animation:fall 3s linear infinite;
+}
+
+@keyframes fall{
+to{
+transform:translateY(100vh) rotate(360deg);
+}
+}
+
+</style>
+
+</head>
+
+<body onload="celebrate()">
+
+<div class="title">Best Power Hitter</div>
+
+<div class="card">
+
+<img src="winner.png">
+
+<div class="player">Player Name</div>
+
+</div>
+
+<audio id="sound">
+<source src="https://assets.mixkit.co/sfx/preview/mixkit-crowd-cheering-449.mp3">
+</audio>
+
+<script>
+
+function celebrate(){
+
+document.getElementById("sound").play();
+
+for(let i=0;i<120;i++){
+
+let conf=document.createElement("div");
+
+conf.className="confetti";
+
+conf.style.left=Math.random()*100+"%";
+
+document.body.appendChild(conf);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
