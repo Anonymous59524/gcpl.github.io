@@ -5,7 +5,7 @@
 
 <title>GCPL Matches</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,46 +16,63 @@ color:white;
 text-align:center;
 }
 
+/* Title */
+
 h1{
-margin-top:50px;
+margin-top:60px;
+font-size:38px;
 }
 
-/* Match Grid */
+/* Match container */
 
 .matches{
 display:flex;
 justify-content:center;
 gap:30px;
-margin-top:50px;
+margin-top:60px;
 flex-wrap:wrap;
 }
 
-/* Match Card */
+/* Match card */
 
 .match-card{
 
-background:#1e293b;
-width:300px;
-padding:20px;
-border-radius:15px;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.15);
+
+width:320px;
+padding:22px;
+
+border-radius:16px;
+
 cursor:pointer;
 transition:0.3s;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 
 }
 
 .match-card:hover{
-transform:scale(1.05);
+transform:translateY(-6px) scale(1.04);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
 }
 
+/* Team names */
+
 .teams{
-font-size:20px;
-font-weight:bold;
-margin-bottom:10px;
+font-size:22px;
+font-weight:600;
+color:#38bdf8;
+margin-bottom:14px;
 }
+
+/* Match info */
 
 .info{
 font-size:14px;
-opacity:0.8;
+color:#e2e8f0;
+margin-top:6px;
 }
 
 </style>
@@ -73,9 +90,9 @@ opacity:0.8;
 
 <div class="teams">Team A vs Team B</div>
 
-<div class="info">Date:</div>
-<div class="info">Time:</div>
-<div class="info">Venue:</div>
+<div class="info">Date :</div>
+<div class="info">Time :</div>
+<div class="info">Venue :</div>
 
 </div>
 </a>
@@ -85,9 +102,9 @@ opacity:0.8;
 
 <div class="teams">Team C vs Team D</div>
 
-<div class="info">Date:</div>
-<div class="info">Time:</div>
-<div class="info">Venue:</div>
+<div class="info">Date :</div>
+<div class="info">Time :</div>
+<div class="info">Venue :</div>
 
 </div>
 </a>
@@ -97,9 +114,9 @@ opacity:0.8;
 
 <div class="teams">Team E vs Team F</div>
 
-<div class="info">Date:</div>
-<div class="info">Time:</div>
-<div class="info">Venue:</div>
+<div class="info">Date :</div>
+<div class="info">Time :</div>
+<div class="info">Venue :</div>
 
 </div>
 </a>
